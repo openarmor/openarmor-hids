@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor Analysisd
+PartOf=openarmor-server.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-analysisd -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-analysisd -f

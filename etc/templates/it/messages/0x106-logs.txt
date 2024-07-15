@@ -1,0 +1,8 @@
+ - Se desideri monitorare qualsiasi altro file, modifica openarmor.conf
+   e aggiungi una nuova, specifica, sezione.
+   Per qualsiasi dubbio sulla configurazione visita il sito del progetto 
+   all'indirizzo http://www.theopenarmor.org .
+ 
+   
+   --- Premi ENTER per continuare ---
+                            

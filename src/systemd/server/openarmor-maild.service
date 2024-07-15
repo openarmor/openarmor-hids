@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor Maild
+PartOf=openarmor-server.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-maild -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-maild -f

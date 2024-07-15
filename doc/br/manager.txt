@@ -1,0 +1,20 @@
+openarmor HIDS 0.5
+Copyright (c) 2004,2005 Daniel B. Cid   <daniel.cid@gmail.com>
+                                        <dcid@theopenarmor.org>
+
+
+
+Como usar o gerenciamento de clientes do servidor.
+
+-A m�quina cliente deve abrir a porta 1514 (por default) para enviar�
+ mensagens para o server. Somente o IP do servidor ser� liberado.
+
+-A cada 10 minutos, o cliente envia uma notifica��o com o status para
+ o servidor. Esta mensagem de status contem informa��es sobre o
+ sistema do cliente e sobre os arquivos do diret�rio compartilhado.
+ 
+-O servidor recebe a mensagem de status, atualiza o arquivo de status 
+ do cliente e checa se h� algum arquivo para ser enviado para o cliente.
+ Se ouver, este conectar� com o cliente e enviar� o arquivo.
+
+-Todas as mensagens s�o criptografadas.

@@ -1,0 +1,54 @@
+<!-- Windows decoder
+       - Will extract extra_data (as win source),action (as win category), id,
+  - username and computer name (as system_name).
+  - Examples:
+  - WinEvtLog: Application: INFORMATION(0x00000064): ESENT:
+    (no user)(no domain):
+  - WinEvtLog: Security: AUDIT_FAILURE(0x000002A9): Security:
+    SYSTEM: NT AUTHORITY: The logon to account: xyz    by:
+    MICROSOFT_AUTHENTICATION_PACKAGE_V1_0    from workstation: la    failed.
+    The error code was: 3221225572
+  - WinEvtLog: Security: AUDIT_FAILURE(0x00000211): Security:
+    SYSTEM: NT AUTHORITY: Logon Failure:      Reason:     Unknown user
+    name or bad password       User Name:  ab      Domain:     cd
+    Logon Type: 2       Logon Process:  User32          Authentication
+    Package: Negotiate       Workstation Name:   ad
+  - WinEvtLog: Security: AUDIT_SUCCESS(538): Security: lac: openarmor-HM: openarmor-HM: User Logoff:        User Name:      lac     Domain:         openarmor-HM        Logon ID:               (0x0,0x7C966E)          Logon Type:     2
+  - 2013 Oct 09 17:09:04 WinEvtLog: Application: INFORMATION(1): My Script: (no user): no domain: demo1.foo.example.com: test
+  -->
+<decoder name="windows">
+  <type>windows</type>
+  <program_name_pcre2>^WinEvtLog</program_name_pcre2>
+</decoder>
+
+<decoder name="windows1">
+  <type>windows</type>
+  <parent>windows</parent>
+  <pcre2 offset="after_parent">^.+: ([A-Za-z0-9@_-]+?)\((\d+?)\): (.+): </pcre2>
+  <pcre2>(.+): .+: (\S+): </pcre2>
+  <order>status, id, extra_data, user, system_name</order>
+  <fts>name, location, system_name</fts>
+</decoder>
+
+<decoder name="windows1">
+  <type>windows</type>
+  <parent>windows</parent>
+  <pcre2> Source Network Address: (\S+)</pcre2>
+  <order>srcip</order>
+</decoder>
+
+
+<decoder name="windows1">
+  <type>windows</type>
+  <parent>windows</parent>
+  <pcre2> Account Name:[ ]+?([A-Za-z0-9@_-]+?)[ ]+?Account</pcre2>
+  <order>user</order>
+</decoder>
+
+<decoder name="windows1">
+  <type>windows</type>
+  <parent>windows</parent>
+  <pcre2>Account Domain:[ ]+?([A-Za-z0-9@_-]+?)[ ]+?Logon ID:</pcre2>
+  <order>extra_data</order>
+</decoder>
+

@@ -1,0 +1,8 @@
+ - Jeśli chcesz monitorować inne pliki, poprostu
+   zmień openarmor.conf oraz dodaj nowy wpis localfile.
+   Wszystkie wyjaśnienia odnośnie konfiguracji
+   znajdziesz na http://www.theopenarmor.org .
+   
+   
+   --- Wciśnij ENTER aby kontynuować ---
+                            

@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor HIDS agent
+After=network.target 
+Requires=openarmor-execd.service
+Requires=openarmor-syscheckd.service
+Requires=openarmor-agentd.service
+Requires=openarmor-logcollector.service
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+
+ Nalaziš se pred početkom instalacionog proces openarmor HIDS.
+ Moraš imati c kompajler već instaliran u svoj sistem.
+

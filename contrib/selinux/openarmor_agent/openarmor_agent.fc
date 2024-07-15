@@ -1,0 +1,23 @@
+/var/openarmor/bin/agent-auth      -- system_u:object_r:openarmor_admin_exec_t:s0
+/var/openarmor/bin/manage_client   -- system_u:object_r:openarmor_admin_exec_t:s0
+/var/openarmor/bin/openarmor-client.sh -- system_u:object_r:openarmor_admin_exec_t:s0
+/var/openarmor/bin/openarmor-configure -- system_u:object_r:openarmor_admin_exec_t:s0
+/var/openarmor/bin/openarmor-control      system_u:object_r:openarmor_admin_exec_t:s0
+/var/openarmor/bin/openarmor-fix-id.sh -- system_u:object_r:openarmor_admin_exec_t:s0
+
+/var/openarmor/bin/openarmor-logcollector    system_u:object_r:openarmor_logcollector_exec_t:s0
+/var/openarmor/bin/client-logcollector   system_u:object_r:openarmor_logcollector_exec_t:s0
+/var/openarmor/bin/client-syscheckd      system_u:object_r:openarmor_syscheck_exec_t:s0
+/var/openarmor/bin/openarmor-agentd       -- system_u:object_r:openarmor_agent_exec_t:s0
+/var/openarmor/bin/openarmor-syscheckd       system_u:object_r:openarmor_syscheck_exec_t:s0
+/var/openarmor/bin/openarmor-execd        -- system_u:object_r:openarmor_exec_exec_t:s0
+
+/var/openarmor                       system_u:object_r:usr_t:s0
+/var/openarmor/bin                   system_u:object_r:bin_t:s0
+/var/openarmor/agentless(/.*)?       system_u:object_r:bin_t:s0
+/var/openarmor/active-response(/.*)? system_u:object_r:bin_t:s0
+/var/openarmor/etc(/.*)?             system_u:object_r:openarmor_conf_t:s0
+/var/openarmor/queue(/.*)?           system_u:object_r:openarmor_queue_t:s0
+/var/openarmor/logs(/.*)?            system_u:object_r:openarmor_log_t:s0
+/var/openarmor/tmp(/.*)?             system_u:object_r:openarmor_tmp_t:s0
+/var/openarmor/var(/.*)?             system_u:object_r:openarmor_var_t:s0

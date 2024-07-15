@@ -1,0 +1,11 @@
+
+    Danke das Sie openarmor HIDS benutzen.
+    Bei Fragen, Anregungen oder wenn Sie einen Fehler gefunden
+    haben, k�nnen Sie die Entwickler per E-Mail contacopenarmorec.net 
+    oder �ber die Mailingliste unteopenarmorec-lisopenarmorec.net erreichen
+    ( http://www.theopenarmor.org/en/mailing_lists.html ).
+
+    Weitere Informtionen finden Sie unter http://www.theopenarmor.org/hids/
+
+    ---  Dr�cken Sie eine Taste um fortzufahren  ---
+    

@@ -1,0 +1,10 @@
+
+
+    感谢使用 openarmor HIDS.
+    如果您有任何疑问,建议或您找到任何bug,
+    请通过　contact@theopenarmor.org 或邮件列表 openarmor-list@theopenarmor.org 联系我们.    
+    ( http://www.theopenarmor.org/en/mailing_lists.html ).
+
+    您可以在　http://www.theopenarmor.org 获得更多信息
+
+    --- 请按　ENTER 结束安装 (下面可能有更多信息). ---

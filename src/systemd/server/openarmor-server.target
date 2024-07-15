@@ -1,0 +1,16 @@
+[Unit]
+Description=openarmor HIDS server
+After=network.target 
+Wants=openarmor-dbd.service
+Wants=openarmor-csyslog.service
+Wants=openarmor-agentless.service
+Requires=openarmor-maild.service
+Requires=openarmor-execd.service
+Requires=openarmor-analysisd.service
+Requires=openarmor-logcollector.service
+Requires=openarmor-remoted.service
+Requires=openarmor-syscheckd.service
+Requires=openarmor-monitord.service
+
+[Install]
+WantedBy=multi-user.target

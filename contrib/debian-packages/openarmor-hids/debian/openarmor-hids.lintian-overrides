@@ -1,0 +1,9 @@
+openarmor-hids: embedded-library
+openarmor-hids: embedded-zlib
+openarmor-hids: possible-gpl-code-linked-with-openssl
+openarmor-hids: new-package-should-close-itp-bug
+openarmor-hids: possibly-insecure-handling-of-tmp-files-in-maintainer-script
+openarmor-hids: non-standard-dir-in-var
+openarmor-hids: file-in-unusual-dir
+openarmor-hids: hardening-no-fortify-functions
+openarmor-hids: hardening-no-relro

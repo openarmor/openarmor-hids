@@ -1,0 +1,5 @@
+
+ - Nie została podjęta żadna akcja aby skonfigurować openarmor HIDS
+   do startowania podczas bootowania.
+   Dodaj następującą linię do skryptu init: 
+

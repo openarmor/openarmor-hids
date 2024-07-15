@@ -1,0 +1,45 @@
+<!--
+      - Samba decoder.
+ - Will extract the username/srcip
+ - Examples:
+ - smbd[832]: Denied connection from (192.168.3.23)
+ - smbd[832]: Connection denied from 0.0.0.0
+ - smbd[17535]: Permission denied\-\- user not allowed to delete,
+   pause, or resume print job. User name: ahmet. Printer name: prnq1.
+  -->
+
+<decoder name="smbd">
+  <program_name_pcre2>^smbd</program_name_pcre2>
+</decoder>
+
+<decoder name="smbd-user">
+  <parent>smbd</parent>
+  <prematch_pcre2>User name:</prematch_pcre2>
+  <pcre2 offset="after_prematch">^ (\S+)\.</pcre2>
+  <order>user</order>
+</decoder>
+
+<decoder name="smbd-ip">
+  <parent>smbd</parent>
+  <pcre2> from \((\S+)\)</pcre2>
+  <order>srcip</order>
+</decoder>
+
+<decoder name="smbd-from">
+  <parent>smbd</parent>
+  <prematch_pcre2> from (\S+)$</prematch_pcre2>
+  <pcre2> from (\S+)$</pcre2>
+  <order>srcip</order>
+</decoder>
+
+<decoder name="smbd-client">
+  <parent>smbd</parent>
+  <prematch_pcre2>to client \S+\.</prematch_pcre2>
+  <pcre2>to client (\S+)\. </pcre2>
+  <order>srcip</order>
+</decoder>
+
+<decoder name="nmbd">
+  <program_name_pcre2>^nmbd</program_name_pcre2>
+</decoder>
+

@@ -1,0 +1,9 @@
+ - Ako želiš da nadgledaš neki drugi fajl, samo promeni 
+   openarmor.conf i dodaj novi localfile ulaz.
+   Sva pitanja vezana za konfiguraciju mogu biti odgovorena 
+   ako nas posetiš online na http://www.theopenarmor.org .
+ 
+
+  --- Pritisni ENTER da nastaviš ---
+   
+                            

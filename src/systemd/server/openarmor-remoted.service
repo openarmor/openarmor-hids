@@ -1,0 +1,11 @@
+[Unit]
+Description=openarmor remoted
+PartOf=openarmor-server.target
+
+[Service]
+Type=forking
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-remoted -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-remoted -f

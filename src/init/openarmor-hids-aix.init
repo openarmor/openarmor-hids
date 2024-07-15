@@ -1,0 +1,29 @@
+#!/bin/ksh
+#
+# name: openarmor
+# purpose: Init script for openarmor-hids
+# Aug. 07 2008 Chris Cuevas
+#
+
+case "$1" in
+start)
+    if [ -f /var/openarmor/bin/openarmor-control ]; then
+        echo "Starting openarmor"
+        /var/openarmor/bin/openarmor-control start
+    fi
+    ;;
+stop)
+    if [ -f /var/openarmor/bin/openarmor-control ]; then
+        echo "Stopping openarmor"
+        /var/openarmor/bin/openarmor-control stop
+    fi
+    ;;
+status)
+    if [ -f /var/openarmor/bin/openarmor-control ]; then
+        /var/openarmor/bin/openarmor-control status
+    fi
+    ;;
+*)
+    echo "Usage: $0 (start | stop | status)"
+    exit 1
+esac

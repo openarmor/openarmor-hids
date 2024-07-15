@@ -1,0 +1,8 @@
+ - Wenn Sie weitere Files �berwachen m�chten, f�gen Sie
+   einen weiteren 'localfile' Eintrag in der Datei
+   openarmor.conf hinzu. Alle Konfigurationsoptionen werden
+   unter http://www.theopenarmor.org/hids/ beschrieben.
+   
+   
+   --- Dr�cken Sie eine Taste um fortzufahren ---
+                            

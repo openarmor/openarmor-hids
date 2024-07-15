@@ -1,0 +1,34 @@
+#!/bin/sh
+# preinst script for openarmor-hids
+
+set -e
+
+# configuration variables
+openarmor_HIDS_TMP_DIR="/tmp/openarmor-hids"
+
+# environment configuration
+if [ ! -d ${openarmor_HIDS_TMP_DIR} ]; then
+  mkdir ${openarmor_HIDS_TMP_DIR}
+fi
+
+case "$1" in
+    install|upgrade)
+        # back up the current user rules
+        if [ -f /var/openarmor/rules/local_rules.xml ]; then
+            cp /var/openarmor/rules/local_rules.xml ${openarmor_HIDS_TMP_DIR}/local_rules.xml
+        fi
+    ;;
+
+    abort-upgrade)
+
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+
+    ;;
+
+esac
+
+exit 0

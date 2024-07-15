@@ -1,0 +1,11 @@
+
+    Thanks for using the openarmor HIDS.
+    If you have any question, suggestion or if you find any bug,
+    contact us at https://github.com/openarmor/openarmor-hids or using
+    our public maillist at  
+    https://groups.google.com/forum/#!forum/openarmor-list
+
+    More information can be found at http://www.theopenarmor.org
+
+    ---  Press ENTER to finish (maybe more information below). ---
+    

@@ -1,0 +1,20 @@
+openarmor v3.8.0
+Copyright (C) 2019 Trend Micro Inc.
+
+** Reporting bugs **
+
+Please, make sure to include the following information:
+
+-openarmor version number.
+-Content of /etc/openarmor-init.conf
+-Content of /var/openarmor/etc/openarmor.conf
+-Content of /var/openarmor/logs/openarmor.log
+-Operating system name/version (uname -a if Unix)
+-Any other relevant information.
+
+Github (Public Issue Reporting):
+https://github.com/openarmor/openarmor-hids/issues
+
+Email (Private Issue Reporting):
+If you prefer to contact us privately or if it is a security
+issue, send an e-mail to openarmor Project ( openarmor@theopenarmor.org ).

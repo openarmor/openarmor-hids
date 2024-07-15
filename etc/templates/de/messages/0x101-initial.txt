@@ -1,0 +1,4 @@
+
+ Um openarmor HIDS zu installieren mu� auf Ihrem System ein C-Compiler
+ installiert sein.
+

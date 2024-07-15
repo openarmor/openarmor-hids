@@ -1,0 +1,51 @@
+openarmor HIDS 0.5
+Copyright (c) 2004,2005 Daniel B. Cid   <daniel.cid@gmail.com>
+                                        <dcid@theopenarmor.org>
+
+
+
+openarmor Hids Logging
+
+== Introdu��o ==
+
+O sistema suporta dois tipos de logs. Logs de alertas e eventos
+ou arquivos de logs. 
+
+Todas as mensagens recebidas s�o tratadas como um envento. Todas as 
+mensagens de log, avisos de integridade, informa��es de sistema s�o
+tratadas como tal. Fazer log de � muito pesado para o sistema pois
+o sistema tem de arquivar cada evendo. Entretanto, � muito bom para
+se ter uma vis�o geral de tentativas de ataque.
+
+Criar logs de alertas � muito importante. Pode ser gerado quando um evento
+vai de encontro com uma regra de detec��o. AdicionalmentopenarmorSSEC hids
+suporta envio de em-ails e execu��o de comandos esternos como m�todo de alerta.
+
+== Criando logs de eventos ==
+
+O diret�rio de logs dopenarmorEC  (by default /vaopenarmorec/logs) 
+poss�i entrada para arquivos (/vaopenarmorec/logs/archives). Dentro deste diret�rio,
+todos os enventos s�o classificados por data.
+Por exemplo, todos os eventos recebidos em 22 de maio de 2004, ser�o guardados em:
+
+/var/openarmor/logs/archives/2004/May/events-22.log
+
+Ap�s cada dia, uma combina��o ser� criada para cada dia espec�fico.
+
+/var/openarmor/logs/archives/2004/May/events-22.log.md5
+
+Este ser� uma combina��o do arquivo do dia 22 com o do dia 21.
+
+A combina��o do dia 1, ser� feita com o dia 31(ou 30 ou 28) do mes anterior.
+
+Isto assegurar� que o log n�o seja modificado. Para que isto aconte�a, 
+todos os logs (desde o primeiro dia) dever�o ser modificados.
+
+
+== Criando logs de alerta ==
+
+Haver� um diret�rio de alerta dentro do diret�rio defauopenarmor OSSEC.
+Este ser� organizado da mesma forma que os logs de envetos. Por facor leia
+a explica��o acima.
+
+

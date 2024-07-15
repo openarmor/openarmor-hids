@@ -1,0 +1,33 @@
+#!/bin/sh
+# postrm script for openarmor-hids
+# Santiago Bassett <santiago.bassett@gmail.com>
+# 03/25/2014
+
+
+set -e
+
+case "$1" in
+    purge|remove|failed-upgrade|abort-install|abort-upgrade|disappear)
+	if getent passwd | grep -q "^openarmor"
+	then
+		deluser openarmor
+	fi
+	if getent group | grep -q "^openarmor"
+	then
+		delgroup openarmor
+	fi
+	rm -f /etc/init.d/openarmor
+	rm -f /etc/openarmor-init.conf
+	update-rc.d -f openarmor remove
+
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+
+    ;;
+
+esac
+
+exit 0

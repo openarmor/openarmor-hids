@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor monitord
+PartOf=openarmor-server.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-monitord -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-monitord -f

@@ -1,0 +1,13 @@
+
+    Ευχαριστούμε για τη χρησιμοποίηση του openarmor HIDS.
+    Αν έχετε κάποια ερώτηση, πρόταση ή αν βρείτε κάποιο bug,
+    επικοινωνήστε μαζί μας στο contact@theopenarmor.org ή χρησιμοποιώντας
+    την λίστα ταχυδρομείου (maillist) στο openarmor-list@theopenarmor.org
+    ( http://www.theopenarmor.org/main/support/ ).
+
+    Περισσότερες πληροφορίες στη διεύθυνση:
+    http://www.theopenarmor.org/
+
+    ---  Πατήστε ENTER για να ολοκληρωθεί η εγκατάσταση 
+         (μπορεί να ακολουθούν περισσότερες πληροφορίες)
+

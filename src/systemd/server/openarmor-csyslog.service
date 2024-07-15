@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor Syslog client
+PartOf=openarmor-server.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-csyslogd -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-csyslogd -f

@@ -1,0 +1,12 @@
+
+    Köszönjük, hogy az openarmor HIDS programot használja!
+    Ha egyéb kérdése, javaslata van, illetve valamilyen bugot talált
+    a programban, lépjen velünk kapcsolatba a contact@theopenarmor.org,
+    vagy a nyilvános levelezőlistánkat használva az
+    openarmor-list@theopenarmor.org e-mail címeken.
+    ( http://www.theopenarmor.org/main/support/ ).
+
+    További információkért látogasson el a http://www.theopenarmor.org weboldalra.
+
+    ---  A befejezéshez nyomjon ENTER-t (alább további információkat talál). ---
+    

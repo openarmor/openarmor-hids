@@ -1,0 +1,11 @@
+    Hvala što koristiš openarmor HIDS.
+    Ako imaš bilo kakvo pitanje, predlog ili ako nađeš neki bag,
+    kontaktiraj nas na contact@theopenarmor.org ili koristeći našu javnu maillistu na
+    openarmor-list@theopenarmor.org
+    ( http://www.theopenarmor.org/main/support/ ).
+
+    Više informacija možeš naći na http://www.theopenarmor.org
+
+    --- Pritisni ENTER da završiš (možda ima još informacije niže). ---
+
+    

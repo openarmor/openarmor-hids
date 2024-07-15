@@ -1,0 +1,9 @@
+openarmor-hids-agent: embedded-library
+openarmor-hids-agent: embedded-zlib
+openarmor-hids-agent: possible-gpl-code-linked-with-openssl
+openarmor-hids-agent: new-package-should-close-itp-bug
+openarmor-hids-agent: possibly-insecure-handling-of-tmp-files-in-maintainer-script
+openarmor-hids-agent: non-standard-dir-in-var
+openarmor-hids-agent: file-in-unusual-dir
+openarmor-hids-agent: hardening-no-fortify-functions
+openarmor-hids-agent: hardening-no-relro

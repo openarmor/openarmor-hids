@@ -1,0 +1,7 @@
+
+  3.4- Mit 'Active Response' k�nnen Befehle abh�ngig von
+       Events ausf�hren. Dadurch k�nnen zB IP-Adressen
+       geblockt werden oder der Zugriff f�r bestimmte 
+       Benutzer abgeschaltet werden.
+       http://www.theopenarmor.org/docs/docs/manual/ar/index.html
+       

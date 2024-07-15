@@ -1,0 +1,4 @@
+
+ Rozpoczynasz proces instalacji programu  openarmor HIDS.
+ Aby kontynuować musisz mieć zainstalowany kompilator C.
+

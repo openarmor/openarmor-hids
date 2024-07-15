@@ -1,0 +1,64 @@
+T�cnicas de detec��o de Rootkit usadasopenarmor OSSEC HIDS
+por Daniel B. Cid, daniel.cid@gmail.com
+
+
+Comen�ando  na vers�o 0.4openarmorSSEC HIDS executar� a detec��o
+de rootkit em todos os sistemas que o cliente estiver instalado.
+O rootcheck (Sistema de detec��o de rootkit) ser� executado
+a cada X minutos (Especificado pelo usu�rio --por default
+a cada 2 horas) para detectar possiveis rootkits instalados.
+Em conjunto com a an�lize de logs e o sistema de checagem de integridade,
+ele torna-se uma solu��o poderosa de monitoramentoopenarmorSSEC HIDS executa
+a an�lize de logs e verifica��o de integridade desde a vers�o 0.1).
+
+Outra caracter�stica inclu�da na vers�o 0.4 � que o servidor de an�lize
+enviar� automaticamente as assinaturas de detec��o de rootkit aos
+clientes, reduzindo o trabalho com administra��o para o administrador
+de sistemas. Os clientes e servidor manter�o contato a cada 10 minutos
+e se o servidor for atualizado com um novo arquivo de assinatura, ele enviar�
+para todos os clientes configurados. De uma olhada na documenta��o para maiores
+informa��es.
+
+O rootcheck executar� as seguintes etapas para verificar a presen�a de 
+rootkits:
+
+
+1- Ler� o arquivo rootkit_files.txt que contem um grande banco de dados
+   de rootkits e arquivos usados pelo mesmo. Tentar� usar as fun��es
+   fopen e opendir no arquivo especificado. N�s usamos todas a chamadas do 
+   sistema,por causa de que rootkits que rodam a nivel de kernel, escondem as 
+   chamadas dos sistema. N�s tentamos melhoras as coutras chamadas do sistema, 
+   para uma melhor detec��o. Este m�todo � mais parecido com uma regra de 
+   ant�-virus, que necessita ser atualizado contantemente. As chances de 
+   falso-positivos s�o pequenas, mas falso-negativos podem ser produzidos 
+   modificando os rootkits.
+
+2- Ler� o arquivo rootkit_trojans.txt que contem um banco de dados de 
+   assinaturas de arquivos infectados por rootkits. Esta t�cnica verifica
+   bin�rios modificados por trojans conhecidos. Este m�todo de detec��o
+   n�o encontra nenhum rootkit a nivel de kernel ou nenhum rootkit desconhecido.
+   
+3- Escaneia o diret�rio /dev procurando por anomalias. O /dev cont�m todos os
+   arquivos de device e scripts de Makedev. V�rios rootkits usam arquivos 
+   escondidoso no /dev. Esta t�cnica pode detectar rootkits desconhecidos.
+
+4- Escaneia o sistema de arquivos a procura por arquivos incomuns e problema de 
+   permi��o. Arquivos setados para root, com permi��o de escrita para outros 
+   s�o muito perigosos e a detec��o de rootkit olha isso. Arquivos com Suid, 
+   diret�rios e arquivos escondidos  s�o inspecionados.
+
+5- Procura pela presen�a de processos ocultos. N�s usamos as fun��es getsid e
+   kill para checar se algum PID est� sendo usado ou n�o. Se estiver, mas a fun��o
+   n�o pode ve-lo, � uma indica��o de rootkit a nivel de kernel ou o ps foi 
+   infectado. N�s verificamos tamb�m a sa�da do kill e do getid que deve ser a mesma.
+
+6- Olha a presen�a de portas escondidas. N�s usamos a fun��o bind para checar todas
+   as portas TCP e UDP to do sistema. Se n�o podemos usar o bind na porta (ele est�
+   sendo usado), mas o netsatat n�o mostra, provavelmente h� um rootkit instalado.
+
+7- Escaneia todas a interfaces do sistema e procura por alguma com m�do "promisc" 
+   abilitado. Se a interface est� neste modo, a sa�da do ifconfig mostrar�. Se n�o,
+   h� a possibilidade de haver um rootkit instalado.
+
+
+EOF

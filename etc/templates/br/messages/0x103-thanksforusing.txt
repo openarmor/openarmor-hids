@@ -1,0 +1,11 @@
+
+    Obrigado por usar o openarmor HIDS.
+    Se você tiver alguma pergunta, sugestão ou encontrar algum 
+    "bug", nos contate através do e-mail contact@theopenarmor.org ou
+    utilize nossa lista de e-mail: 
+    ( http://www.theopenarmor.org/main/support/ ).
+
+    Maiores informações podem ser encontradas em http://www.theopenarmor.org
+
+    ---  Pressione ENTER para continuar  ---
+

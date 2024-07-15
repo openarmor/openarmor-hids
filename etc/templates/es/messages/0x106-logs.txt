@@ -1,0 +1,9 @@
+
+ - Si desea monitorizar algún otro registro, solo
+   tendrá que editar el archivo openarmor.conf y agregar una
+   nueva entrada de tipo localfile.
+   Cualquier otra pregunta de configuración podrá ser 
+   respondida visitandonos en linea en http://www.theopenarmor.org .
+   
+   --- Presione ENTER para continuar ---
+                            

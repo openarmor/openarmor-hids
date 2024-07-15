@@ -1,0 +1,28 @@
+
+  - Es gibt drei Arten der Installation: agent, local oder server.
+  
+    - Wenn Sie Server w�hlen, k�nnen Logfiles analysiert werden, 
+      es werden Benachrichtigungen per E-Mail verschickt und es
+      k�nnen Logs von Agenten auf entfernten Rechnern empfangen
+      werden.
+
+    - Wenn Sie Agent ausw�hlen, k�nnen Logfiles ausgelesen werden
+      (zb syslog, snort, apache) und verschl�sselt an einen
+      Server zur analyse geschickt werden.
+      
+    - Wenn Sie local ausw�hlen, k�nnen alle Funktionen eines
+      Servers, bis auf den Empfang von Agentennachrichten ausge-
+      f�hrt werden.
+
+  - W�hlen Sie 'Server' wenn Sie Nachrichten von fremden Agenten
+    empfangen und verarbeiten m�chten.
+  
+  - W�hlen Sie 'Agent' wenn Sie einen anderen Rechner haben, der
+    als Server dient und an den die Logs zur Analyse geschickt 
+    werden (sinnvoll zb f�r Webserver, Datenbankserver usw).
+
+  - W�hlen Sie 'Local' wenn nur ein System analysiert werden soll.  
+    
+  - weitere Informationen unter: http://www.theopenarmor.org/docs/docs/manual/non-technical-overview.html
+
+  

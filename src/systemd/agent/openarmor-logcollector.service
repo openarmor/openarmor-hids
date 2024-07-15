@@ -1,0 +1,10 @@
+[Unit]
+Description=openarmor Logcollector
+PartOf=openarmor-agent.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-logcollector -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-logcollector -f

@@ -1,0 +1,86 @@
+*.so
+*.o
+*.a
+*.dSYM
+.DS_Store
+*.dll
+*.exe
+
+# Auto generated build files
+src/LOCATION
+src/external/zlib-1.2.11/configure.log
+src/external/zlib-1.2.11/Makefile
+src/external/zlib-1.2.11/zconf.h
+src/external/zlib-1.2.11/zlib.pc
+src/external/zlib-1.2.11/zlib.3.pdf
+src/isbigendian.c
+src/analysisd/compiled_rules/compiled_rules.h
+etc/openarmor.mc
+src/Config.OS
+src/external/zlib-1.2.8/ztest*
+
+# Compiled programs
+src/agent-auth
+src/agent_control
+src/clear_stats
+src/external/lua-5.2.3/src/openarmor-lua
+src/external/lua-5.2.3/src/openarmor-luac
+src/isbigendian
+src/list_agents
+src/manage_agents
+src/openarmor-agentd
+src/openarmor-agentlessd
+src/openarmor-analysisd
+src/openarmor-authd
+src/openarmor-csyslogd
+src/openarmor-dbd
+src/openarmor-execd
+src/openarmor-logcollector
+src/openarmor-logtest
+src/openarmor-maild
+src/openarmor-makelists
+src/openarmor-monitord
+src/openarmor-regex
+src/openarmor-regex-convert
+src/openarmor-remoted
+src/openarmor-reportd
+src/openarmor-syscheckd
+src/rootcheck_control
+src/syscheck_control
+src/syscheck_update
+src/verify-agent-conf
+
+
+# Eclipse files
+.cproject
+.project
+.settings/
+
+# temporary vim files
+*.swp
+*.swo
+
+# patch files
+*.rej
+*.orig
+
+# test and coverage files
+*.gcno
+*.gcda
+src/coverage-report/
+src/openarmor.test
+src/test_os_crypto
+src/test_os_net
+src/test_os_regex
+src/test_os_xml
+src/test_os_zlib
+src/test_shared
+
+# Windows-specific build output:
+src/win32/LICENSE.txt
+src/win32/default-local_internal_options.conf
+src/win32/default-openarmor.conf
+src/win32/help_win.txt
+src/win32/internal_options.conf
+src/win32/restart-openarmor.cmd
+src/win32/route-null.cmd

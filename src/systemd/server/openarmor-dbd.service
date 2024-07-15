@@ -1,0 +1,10 @@
+[Unit]
+Description=The openarmor DBD
+PartOf=openarmor-server.target
+
+[Service]
+EnvironmentFile=/etc/openarmor-init.conf
+Environment=DIRECTORY=/var/openarmor
+
+ExecStartPre=/usr/bin/env ${DIRECTORY}/bin/openarmor-dbd -t
+ExecStart=/usr/bin/env ${DIRECTORY}/bin/openarmor-dbd -f

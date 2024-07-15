@@ -1,0 +1,28 @@
+openarmor HIDS 0.6
+Copyright (c) 2004-2006 Daniel B. Cid   <daniel.cid@gmail.com>
+                                        <dcid@theopenarmor.org>
+                                        
+
+Como a resposta ativa trabalha internamente:
+
+- Leia o arquivo active-respose-doc.txt para maiores detalhes 
+  de configura��o
+
+
+1 - O servidor de an�lize recebe um evento que acione a 
+    pol�tica de resposta ativa.
+
+2 - O servidor de an�lize verifica todos os campos requeridos
+    fornecidos pelo evento. Isto significa que o servidor
+    de an�lise decodificar� o evento e ir� extrair as informa��es
+    necess�rias. Um exemplo disto � que pode-se extrair o n�mero
+    de IP de um evento e envi�lo para o firewall bloquear.
+    
+3 - Se a pol�tica de resposta ativa especificar esta a��o, e esta
+    dever ser executada localmente no AS, uma mensagem deve ser 
+    enviada diretamente.
+
+4 - Se a pol�tica de resposta ativa especificar uma a��o,
+    e esta deve ser executada remotamente, uma mensagem � enviada para
+    o servidor (remoted) para enviar o evento ao cliente especificado.
+

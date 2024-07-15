@@ -1,0 +1,6 @@
+openarmor HIDS v0.7
+Copyright (c) 2004-2006 Daniel B. Cid   <daniel.cid@gmail.com>
+                                        <dcid@theopenarmor.org>
+
+
+http://www.theopenarmor.org/docs/docs/manual/ar/index.html

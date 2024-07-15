@@ -1,0 +1,19 @@
+#!/bin/bash
+
+rpm -e openarmor-hids-server-FC7
+rpm -e openarmor-hids-local-FC7
+rpm -e openarmor-hids-agent-FC7
+
+rm -fr /var/openarmor/ 
+
+for A in openarmor openarmorm openarmorr ; do /usr/sbin/userdel -r $A ; done 
+
+/usr/sbin/groupdel openarmor
+
+/sbin/chkconfig openarmor off
+/sbin/chkconfig --del openarmor
+
+# Remove init.d file
+[ -f /etc/init.d/openarmor ] && rm /etc/init.d/openarmor
+
+
