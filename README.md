@@ -1,53 +1,76 @@
-openarmor v3.8.0 Copyright (C) 2019 Trend Micro Inc.
+<div align="center">
 
-# Information about openarmor
+# OpenArmor HIDS
 
-openarmor is a full platform to monitor and control your systems. It mixes together
-all the aspects of HIDS (host-based intrusion detection), log monitoring and
-SIM/SIEM together in a simple, powerful and open source solution.
+<img src="assets/154563680.png" alt="OpenArmor HIDS Logo" width="200"/>
 
-Visit our website for the latest information. [www.theopenarmor.org](https://www.theopenarmor.org)
+**Because your servers deserve better than a 'Please don't hack me' sticky note.**
 
-## Current Releases
+[Website](https://www.theopenarmor.org) • [Docs](https://www.theopenarmor.org/docs/) • [Downloads](https://www.theopenarmor.org/downloads/) • [Community](https://discord.gg/BXzM75Xzq7)
 
-The current stable releases are available on the openarmor website.
+[![Build Status](https://img.shields.io/travis/openarmor/openarmor-hids/master.svg?style=flat-square)](https://travis-ci.org/openarmor/openarmor-hids)
+[![Coverity Scan](https://img.shields.io/coverity/scan/1847.svg?style=flat-square)](https://scan.coverity.com/projects/1847)
+[![License](https://img.shields.io/github/license/openarmor/openarmor-hids.svg?style=flat-square)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/openarmor/openarmor-hids.svg?style=flat-square)](https://github.com/openarmor/openarmor-hids/stargazers)
 
-- Releases can be downloaded from: [Downloads](https://www.theopenarmor.org/downloads/)
-- Release documentation is available at: [docs](https://www.theopenarmor.org/docs/)
+</div>
 
-## Development
+## 🛡️ About OpenArmor HIDS
 
-The development version is hosted on GitHub and just a simple git clone away.
+OpenArmor HIDS is a powerful fork of OSSEC, offering an enhanced open-source host-based intrusion detection system. It brings modern security capabilities to your infrastructure:
 
-[![Build Status](https://travis-ci.org/openarmor/openarmor-hids.svg?branch=master)](https://travis-ci.org/openarmor/openarmor-hids)
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/1847/badge.svg)](https://scan.coverity.com/projects/1847)
+- 📜 Log analysis
+- 🔍 File integrity monitoring
+- 📊 Policy enforcement
+- 🕵️ Rootkit detection
+- ⚡ Real-time alerting
+- 🛠️ Active response
 
-## Screenshots
+Our mission is to modernize and extend OSSEC's capabilities within the OpenArmor framework, providing improved security and seamless integration for contemporary environments.
 
-_File Integrity Monitoring_
+## 🚀 Getting Started
 
-![FIM](./doc/images/fim-test.gif)
+```bash
+git clone https://github.com/openarmor/openarmor-hids.git
+cd openarmor-hids
+./install.sh
+```
 
-_Attack Detection_
+For detailed installation instructions, check our [documentation](https://www.theopenarmor.org/docs/).
 
-![SSH Brute Force](./doc/images/ssh-attack.gif)
+## 📸 Features in Action
 
-## Help / Support
+<details>
+<summary>File Integrity Monitoring</summary>
+<img src="./doc/images/fim-test.gif" alt="File Integrity Monitoring Demo">
+</details>
 
-Join us on slack, openarmor.slack.com: Invites to slack@theopenarmor.org
+<details>
+<summary>Attack Detection</summary>
+<img src="./doc/images/ssh-attack.gif" alt="SSH Brute Force Attack Detection Demo">
+</details>
 
-Join us on Discord: https://discord.gg/BXzM75Xzq7
+## 🤝 Community & Support
 
-## Credits and Thanks
+- [Discord](https://discord.gg/BXzM75Xzq7)
+- [Slack](https://openarmor.slack.com) (Invite: slack@theopenarmor.org)
 
-- openarmor comes with a modified version of zlib and a small part
-  of openssl (sha1 and blowfish libraries)
-- This product includes software developed by the OpenSSL Project
-  for use in the OpenSSL Toolkit (http://www.openssl.org/)
-- This product includes cryptographic software written by Eric
-  Young (eay@cryptsoft.com)
-- This product include software developed by the zlib project
-  (Jean-loup Gailly and Mark Adler)
-- This product include software developed by the cJSON project
-  (Dave Gamble)
-- [Atomicorp](https://www.atomicorp.com) hosting the annual openarmor conference. Presentations for the 2019 conference can be found at https://www.atomicorp.com/openarmor-con2019/
+## 🙏 Credits
+
+OpenArmor HIDS stands on the shoulders of giants. We're grateful to:
+
+- The OSSEC project
+- OpenSSL Project
+- zlib project
+- cJSON project
+- [Atomicorp](https://www.atomicorp.com) for hosting the annual OpenArmor conference
+
+## 📄 License
+
+OpenArmor HIDS is open-source software licensed under the [GNU General Public License v2.0](LICENSE).
+
+---
+
+<div align="center">
+Made with ❤️ by the OpenArmor community
+</div>
